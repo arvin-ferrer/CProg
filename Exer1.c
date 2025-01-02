@@ -5,7 +5,6 @@ int main(void){
   int frequency;
   int cost;
   int weeks = 52;
-  // float totalCost = cost*frequency;
   double interest = 0.04;
   
   printf("How many times in a week do you buy milk tea? ");
