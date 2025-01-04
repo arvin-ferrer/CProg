@@ -14,8 +14,23 @@ void rightTriangle(void){
   }
 
 }
+void loops(int i){
+  for (int j = 1; j < i+1; j++){
+    printf("* ");
+  }
+  printf("\n");
+}
 
 
+void rightTriangleSequential(void){
+  int dimension;  
+  printf("Enter dimension: ");
+  scanf("%d", &dimension);
+  for (int i = 1; i < dimension+1; i++){
+    loops(i);
+  } 
+
+}
 int main(void){
   int n;
   int start = 0;
@@ -31,7 +46,9 @@ int main(void){
   
   }
   
-  rightTriangle();
+  // rightTriangle();
+  rightTriangleSequential();
+
   // for loop version
   // for(int start=1; start != pow(n,2)+1; start++){
     // printf("%d ", start);
