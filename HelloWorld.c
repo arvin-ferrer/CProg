@@ -45,7 +45,7 @@ int main(void){
   for (i = 2, j = 9; i < 10; i++, j--){
     printf("%d, %d\n", i, j);
   }
-
+  //an empty for loop is an infinite loop 
 
 }
  
