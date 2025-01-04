@@ -1,6 +1,20 @@
 #include <stdio.h>
 #include <math.h>
 
+void rightTriangle(void){
+  int dimension;
+  printf("Enter dimension: ");
+  scanf("%d", &dimension);
+  for (int i = 1; i < dimension+1; i++){
+    for (int j = 1; j <= i; j++){
+      printf("*");
+    
+    }
+    printf("\n");
+  }
+
+}
+
 
 int main(void){
   int n;
@@ -17,6 +31,7 @@ int main(void){
   
   }
   
+  rightTriangle();
   // for loop version
   // for(int start=1; start != pow(n,2)+1; start++){
     // printf("%d ", start);
