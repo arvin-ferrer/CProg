@@ -14,12 +14,16 @@ void rightTriangle(void){
   }
 
 }
+
+
+//Remade version of <char> * <int>
 void loops(int i){
   for (int j = 1; j < i+1; j++){
     printf("* ");
   }
   printf("\n");
 }
+
 
 
 void rightTriangleSequential(void){
@@ -45,9 +49,11 @@ int main(void){
     }
   
   }
-  
-  // rightTriangle();
-  rightTriangleSequential();
+
+
+  // rightTriangle(); //nested loop version
+
+  rightTriangleSequential(); //sequential version no nested loops
 
   // for loop version
   // for(int start=1; start != pow(n,2)+1; start++){
