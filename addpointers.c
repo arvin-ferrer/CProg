@@ -5,7 +5,6 @@
 int add(int *ptr1, int *ptr2){
 
   int sum;
-  int sumadd;
   sum = *ptr1 + *ptr2;
   return sum;
 
