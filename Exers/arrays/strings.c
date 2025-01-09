@@ -15,9 +15,12 @@ int main(){
   char s[]= "Hello World"; //same as s[] = "Hello World";  
   int sizeOfs = strlen(s); //string initializers either char *s or s[]
   //char *s = "Hello World"  //string literals are immutable
-  char *copyS = s;
+  char *copyS = s; //you are copying a pointer instead of a string
   printf("%s\n", s);
   copyS[0] = 'z';
-  printf("%s\n",s);
-  printf("Len of string: %d \n",ownstrlen(s));
+  printf("%s\n",s); 
+
+  printf("Len of string: %d \n",ownstrlen(copyS));
+
+
 }
