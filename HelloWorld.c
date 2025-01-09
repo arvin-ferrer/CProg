@@ -47,6 +47,11 @@ int main(void){
   }
   //an empty for loop is an infinite loop 
 
+  
+  //arrays
+  
+
+
 
 }
  
