@@ -1,5 +1,4 @@
 /* Starting Point */
-#include <signal.h>
 #include <stdio.h>
 #include <stdbool.h> //needed for symbolic names true and false
 
