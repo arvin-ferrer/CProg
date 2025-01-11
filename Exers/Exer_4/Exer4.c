@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
-
+#include <stdlib.h>
+#include <string.h>
 void mainMenu(void){
     
     printf("\nWELCOME TO SILVERLOCK'S COFFEE SHOP!\n\n");
@@ -27,14 +28,18 @@ void coffees(){
 int main(){
   
   int choice;
-  int totalPrice = 0;
+  char coupon[100];
+  double totalPrice = 0;
   int coffee;
   bool active = true;
+  char discount;
+  double amountPay;
   mainMenu();
   while (active){
     
     printf("Enter choice: ");
     scanf("%d", &choice);
+
     if (choice == 1){
       while(true){
         coffees();
@@ -64,12 +69,50 @@ int main(){
             break;
         }
         if(coffee == 0){
+          printf("\nYour current price to pay is: %0.2f\n", totalPrice);
+          mainMenu();
+          break;}
+           }
+        }
+    else if(choice == 2){
+        while (true){
+        printf("Enter your coupon: ");
+        scanf("%s", coupon);
+        if (strcmp(coupon, "COFFEELOVER") == 0){
+          totalPrice = totalPrice - (totalPrice*0.15);
           break;
         }
+        else if (strcmp(coupon, "FREESHOT") == 0){
+          totalPrice = totalPrice - (totalPrice*0.10);
+          break;
+        }
+        else{
+          printf("Invalid coupon\n");
+          break;
+        }
+      }     
+        printf("Your current price to pay is: %0.2f\n", totalPrice);
+        mainMenu();
+    }
+    else if(choice == 3){
+      printf("\nYour total is: %0.2f\n", totalPrice);
+      totalPrice = totalPrice+(totalPrice*0.07);
+      printf("Your total with service charge is 7%%: %0.2f\n", totalPrice);
+      printf("\nDo you have a PWD ID or a Senior Citizen ID? (y/n): ");
+      scanf(" %c", &discount);
+      if (discount == 'y' || discount == 'Y'){
+        totalPrice = totalPrice - (totalPrice*0.20);
+        printf("Your total with 20%% discount: %0.2f\n", totalPrice);
       }
-    
-      
+      printf("Enter amount to pay: ");
+      scanf("%lf", &amountPay);
+      printf("Your change is: %0.2f\n", amountPay-totalPrice);
+      printf("\nThank you for shopping!\n");
+      mainMenu();
+    }
+    else if(choice == 0){
+      printf("Goodbye!\n");
+      break;
     }
   }
-
 }
