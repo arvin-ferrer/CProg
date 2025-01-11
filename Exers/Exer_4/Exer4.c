@@ -62,9 +62,12 @@ int main(){
           default:
             printf("Invalid choice, try again\n");
             break;
-        }   
+        }
+        if(coffee == 0){
+          break;
+        }
       }
-
+    
       
     }
   }
