@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
+
+
 void mainMenu(void){
     
     printf("\nWELCOME TO SILVERLOCK'S COFFEE SHOP!\n\n");
