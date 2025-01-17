@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
+
 void rightTriangle(void){
   int dimension;
   printf("Enter dimension: ");
@@ -14,6 +15,9 @@ void rightTriangle(void){
   }
 
 }
+
+
+
 
 
 //Remade version of <char> * <int>
