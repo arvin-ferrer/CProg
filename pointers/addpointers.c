@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-
-
 int add(int *ptr1, int *ptr2){
 
   int sum;
