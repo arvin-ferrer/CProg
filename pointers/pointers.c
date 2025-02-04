@@ -21,6 +21,14 @@ int main(void){
   
   int var;
   int *pointer;
+  // 
+  printf("-----------\n");
+  int ** cptr;
+
+  char *c;
+  cptr = &c;
+  printf("%p, \n", cptr);
+  printf("-----------\n");
 
   pointer = &var;
   var = 10;
