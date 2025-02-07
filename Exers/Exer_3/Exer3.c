@@ -21,9 +21,9 @@ void rightTriangle(void){
 
 
 //Remade version of <char> * <int>
-void loops(int i){
-  for (int j = 1; j < i+1; j++){
-    printf("* ");
+void makeTriangle(char c, int i){
+  for (int j = 1; j <= i; j++){
+    printf("%c ", c);
   }
   printf("\n");
 }
@@ -35,7 +35,7 @@ void rightTriangleSequential(void){
   printf("Enter dimension: ");
   scanf("%d", &dimension);
   for (int i = 1; i < dimension+1; i++){
-    loops(i);
+    makeTriangle('*', i);
   } 
 
 }
